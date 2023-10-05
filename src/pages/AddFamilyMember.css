@@ -1,0 +1,95 @@
+/* AddFamilyMember.css */
+
+.family-member-container {
+  background-color: #fff;
+
+  border-radius: 8px;
+
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+  padding: 20px;
+
+  width: 400px;
+
+  text-align: center;
+
+  
+}
+
+.family-member-container h1 {
+  font-size: 24px;
+
+  margin-bottom: 20px;
+
+  color: #007bff;
+}
+
+.family-member-container input {
+  width: 100%;
+
+  padding: 10px;
+
+  margin: 8px 0;
+
+  border: 1px solid #ccc;
+
+  border-radius: 4px;
+
+  box-sizing: border-box;
+}
+
+.family-member-container button {
+  background-color: #007bff;
+
+  color: #fff;
+
+  border: none;
+
+  border-radius: 4px;
+
+  padding: 10px 20px;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease-in-out;
+}
+
+.family-member-container button:hover {
+  background-color: #0056b3;
+}
+
+.family-member-container div label {
+  display: block;
+
+  margin-top: 10px;
+}
+
+/* Reuse the styles for select dropdown */
+
+.family-member-container select {
+  width: 100%;
+
+  padding: 10px;
+
+  margin: 8px 0;
+
+  border: 1px solid #ccc;
+
+  border-radius: 4px;
+
+  box-sizing: border-box;
+}
+
+/* Reuse the link styles for consistency */
+
+.family-member-container a {
+  color: #007bff;
+
+  text-decoration: none;
+}
+
+.family-member-container a:hover {
+  text-decoration: underline;
+}
+
+
