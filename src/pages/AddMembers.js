@@ -1,8 +1,8 @@
-// 
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useLocation } from 'react-router-dom';
+import "./AddFamilyMember.css";
 
 
 
@@ -42,10 +42,8 @@ function AddUser(props) {
   return (
     <div className="container">
       <div className="row">
-        {/* <div className="col-md-6 offset-md-3 border rounded p-4 mt-2 shadow"> */}
-        {/* <h2 className="text-center m-4">Creat Customer</h2> */}
         <div>
-          <h2> {props.title}</h2>
+          <h2 className="heading"> Add Family</h2>
 
           <form
             onSubmit={(e) => onSubmit(e)
@@ -84,9 +82,6 @@ function AddUser(props) {
                   <label htmlFor="DOB" className="form-label">
                     Date of birth:
                   </label>
-                  {/* <input type="date" name="begin" 
-        placeholder="dd-mm-yyyy" value=""
-        min="1997-01-01" max="2030-12-31"> */}
                   <input
                     type={"date"}
                     className="form-control"
@@ -100,7 +95,7 @@ function AddUser(props) {
               <div className="row">
                 <div className="mb-3 col">
                   <label htmlFor="id type" className="form-label">ID type</label>
-                  <select className="form-select" aria-label="Default select example" name="id_type" onChange={(e) => onInputChange(e)} value={user.id_type} required>
+                  <select className="form-select" aria-label="Default select example" name="id_type" onChange={(e) => onInputChange(e)} value={id_type} required>
                     <option value="">Open this select menu</option>
                     <option name="id_type" value="Aadhar Number">Aadhar Number</option>
                     <option name="id_type" value="PAN Number">PAN Number</option>
@@ -136,10 +131,11 @@ function AddUser(props) {
             <button type="submit" className="btn btn-outline-primary">
               Submit
             </button>
-          </form>
+         
           <button className="btn btn-outline-danger mx-2" onClick={handleCancel}>
               Cancel
             </button>
+            </form>
         </div >
       </div >
     </div >

@@ -1,8 +1,18 @@
 .cardStyle {
   height: 20vw;
+
 }
 
 .package-slide{
     padding: 50px;
 
+}
+.head{
+  color:white;
+}
+.c{
+  background-color: #140c25;
+  border: 0px solid black;
+  border-radius: 20px;
+  opacity: 0.8;
 }

@@ -12,6 +12,7 @@ const style = {
   // boxShadow: 24,
   p: 4,
   borderRadius: 5,
+  opacity:"0.94",
 };
 
 function PlatinumPlan() {

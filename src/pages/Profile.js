@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import {Typography, Button, Stack } from '@mui/material';
-import DataBox from './DataBox';
-import { useLocation } from 'react-router-dom';
+import React, { useState } from "react";
+import { Typography, Button, Stack } from "@mui/material";
+import DataBox from "./DataBox";
+import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import BasicModal from "../components/Modal";
 import Modal from "@mui/material/Modal";
@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Box from "@mui/material/Box";
 import axios from "axios";
-
 
 const style = {
   position: "absolute",
@@ -33,51 +32,69 @@ function Profile() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const [plan, setPlan] = useState(boxes[0].family.plan)
+  const [plan, setPlan] = useState(boxes[0].family.plan);
 
   const handleAdd = () => {
-    navigate('/add-user', { state: data});
+    navigate("/add-user", { state: data });
   };
 
   const changePlan = (val) => {
     setPlan(val);
-    const userData = axios.put(`http://localhost:8080/api/customer/updatePlanByID/${boxes[0].family.family_id}/${val}`);
+    const userData = axios.put(
+      `http://localhost:8080/api/customer/updatePlanByID/${boxes[0].family.family_id}/${val}`
+    );
     handleClose();
   };
+
+  let style = {
+    marginTop: "20px",
+    color: "white",
+    backgroundColor: "rgb(38, 10, 65)",
+    opacity: "0.9",
+    margin: " 10px auto",
+    width: "50%",
+    border: "0px solid ",
+    borderRadius:"10px",
+    padding: "10px",
+  };
+
   return (
     <div>
-      <Typography align="center" variant="h5" sx={{ marginBottom: 2 }}>
+      <Typography align="center" variant="h5" sx={style}>
         ACCOUNT USER DETAILS
-      </Typography> 
-      <Typography variant="h5" sx={{ marginBottom: 2 }}>
-        {`Selected plan : ${plan}`}
+      </Typography>
+      <Typography variant="h5" align="center" sx={style}>
+        {`Selected plan : ${plan.toUpperCase()}`}
       </Typography>
       <Stack spacing={2} direction="column" alignItems="center">
-         {boxes.map((box, index) => (
-                <DataBox key={index} data={box} />
-            ))}
-       </Stack>
-      <Box textAlign='center' mt={5}>
-      <Button variant="contained" onClick={handleAdd}>
-        Add Members 
-      </Button>
-      
-      <Link className="btn btn-outline-primary mx-2" onClick ={handleOpen} >
+        {boxes.map((box, index) => (
+          <DataBox key={index} data={box} />
+        ))}
+      </Stack>
+      <Box textAlign="center" mt={5}>
+        <Button
+          className="btn btn-success mx-2"
+          variant="contained"
+          onClick={handleAdd}
+        >
+          Add Members
+        </Button>
+
+        <Link className="btn btn-success mx-2" onClick={handleOpen}>
           Change Plan
         </Link>
-        </Box>
+      </Box>
       <Modal
         open={open}
         onClose={handleClose}
-        
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <SpacingGrid plan={plan} changePlan={changePlan}/>
+          <SpacingGrid plan={plan} changePlan={changePlan} />
         </Box>
       </Modal>
-<div>
+      <div>
         <br />
       </div>
     </div>

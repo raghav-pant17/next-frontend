@@ -7,7 +7,7 @@ const PlanDetails = ({ match }) => {
     const plan = plans.find((p) => p.id === params.planId);
   
     return (
-      <Container>
+      <Container >
         <Card>
           <CardContent>
             <Typography variant="h5" component="div">

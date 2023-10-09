@@ -5,28 +5,9 @@ import "./UserFamilyInfo.css";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import BasicModal from "../components/Modal";
 
-// import "./UserDataComponent.css";
-
 function UserDetails(props) {
-  // State to store user and family data
   const [userData, setUserData] = useState([]);
   const [familyData, setFamilyData] = useState([]);
-
-  // // Fetch user data
-  // useEffect(() => {
-  //   fetch("http://localhost:8080/api/customer/getAllCustomers")
-  //     .then((response) => response.json())
-  //     .then((data) => setUserData(data))
-  //     .catch((error) => console.error("Error fetching user data:", error));
-  // }, []);
-
-  // // Fetch family data
-  // useEffect(() => {
-  //   fetch("URL")
-  //     .then((response) => response.json())
-  //     .then((data) => setFamilyData(data))
-  //     .catch((error) => console.error("Error fetching family data:", error));
-  // }, []);
 
   return (
     <div>
@@ -42,7 +23,7 @@ function UserDetails(props) {
                     {user.first_name} {user.last_name}
                   </h5>
                   <p className="card-text">
-                    <strong>Date of Birth:</strong> 
+                    <strong>Date of Birth:</strong>
                     {user.dob}
                     <br />
                     <strong>Aadhar:</strong> {user.id_number}
@@ -80,8 +61,8 @@ function UserDetails(props) {
         </Link>
         <br />
         <div>
-      <br />
-    </div>
+          <br />
+        </div>
       </div>
     </div>
   );

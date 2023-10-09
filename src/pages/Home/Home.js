@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 import CarouselDesign from './CarouselDesign';
 
 
+
+
 const Home = () => {
 
     return(
         <div >
-        <Stack spacing={3} alignItems={"center"}>
+        <Stack spacing={3} alignItems={"center"} >
            
             <CarouselDesign/>
            

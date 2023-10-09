@@ -54,23 +54,25 @@ const packages = [
   },
 ];
 
+
+
 const CarouselDesign = () => {
   return (
     <>
-      <Box sx={style}>
-        <div className="carousel-container">
+      <Box sx={style} style={{backgroundColor: 'transparent'}}>
+        <div className="carousel-container c" >
           <Carousel showThumbs={false} infiniteLoop autoPlay>
             {packages.map((pkg, index) => (
               <Link to={`/${pkg.id}`} style={{ textDecoration: "none" }}>
                 {console.log(pkg.img)}
                 <div className="cardStyle">
                   <div key={index} className="package-slide">
-                    <h2>{pkg.name}</h2>
-                    <h3>{pkg.price}</h3>
-                    <h4>{pkg.description}</h4>
+                    <h2 className="head">{pkg.name}</h2>
+                    <h3 className="head">{pkg.price}</h3>
+                    <h4 className="head">{pkg.description}</h4>
 
                     <Link to={`/${pkg.id}`}>
-                      <button class="btn btn-outline-dark">See More</button>
+                      <button className="head" class="btn btn-dark">See More</button>
                     </Link>
                   </div>
                 </div>

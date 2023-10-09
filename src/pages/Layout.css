@@ -1,0 +1,10 @@
+.home-banner{
+   
+    height: 100vh;
+    overflow: auto;
+    background-image: url("https://github.com/dakshAmdocs/next-platform-frontend/blob/main/src/pages/Home/banner-image-37-01%20(1).png?raw=true");
+    background-size: cover;
+    background-position: center;
+
+    }
+  

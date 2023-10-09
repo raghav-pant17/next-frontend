@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useParams } from 'react-router-dom';
-// import "./Login.css";
+import "./Login.css";
 
 
 function Signup(props) {
@@ -59,7 +59,7 @@ function Signup(props) {
   };
 
   return (
-    <div className="container">
+    <div className="container container-signup">
       <div className="row">
         <div>
           <div className="d-flex align-items-center justify-content-center" >
@@ -204,7 +204,7 @@ function Signup(props) {
             <div className="d-flex align-items-center justify-content-center">
               <div class="p-2 m-2">
                 <p>
-                  <button type="submit">
+                <button className="btn btn-success" type="submit">
                     Sign Up
                   </button>
                 </p>
