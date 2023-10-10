@@ -59,7 +59,7 @@ const packages = [
 const CarouselDesign = () => {
   return (
     <>
-      <Box sx={style} style={{backgroundColor: 'transparent'}}>
+      <Box sx={style} style={{backgroundColor: 'transparent' }}>
         <div className="carousel-container c" >
           <Carousel showThumbs={false} infiniteLoop autoPlay>
             {packages.map((pkg, index) => (
@@ -67,12 +67,15 @@ const CarouselDesign = () => {
                 {console.log(pkg.img)}
                 <div className="cardStyle">
                   <div key={index} className="package-slide">
+                    <div className="package-info">
                     <h2 className="head">{pkg.name}</h2>
                     <h3 className="head">{pkg.price}</h3>
                     <h4 className="head">{pkg.description}</h4>
+                    </div>
+                    
 
                     <Link to={`/${pkg.id}`}>
-                      <button className="head" class="btn btn-dark">See More</button>
+                      <button className="see-more btn btn-danger">See More</button>
                     </Link>
                   </div>
                 </div>

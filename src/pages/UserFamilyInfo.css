@@ -1,13 +1,13 @@
-
 .container {
   background-color: #061a2d;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
 }
 
-h2,h3,h4{
+h2,
+h3,
+h4 {
   color: #333;
 }
 
@@ -15,7 +15,6 @@ h2,h3,h4{
   border: 1px solid #ddd;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
- 
 }
 
 .card-title {
@@ -32,6 +31,6 @@ h2,h3,h4{
   color: #007bff;
 }
 
-.buttons{
+.buttons {
   text-align: center;
 }

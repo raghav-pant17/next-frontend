@@ -11,17 +11,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Box from "@mui/material/Box";
 import axios from "axios";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 600,
-  bgcolor: "background.paper",
-  boxShadow: 700,
-  p: 4,
-  borderRadius: 4,
-};
+// const style = {
+//   position: "absolute",
+//   top: "50%",
+//   left: "50%",
+//   transform: "translate(-50%, -50%)",
+//   width: 600,
+//   bgcolor: "background.paper",
+//   boxShadow: 700,
+//   p: 4,
+//   borderRadius: 4,
+// };
 
 function Profile() {
   const location = useLocation();
@@ -68,7 +68,7 @@ function Profile() {
       </Typography>
       <Stack spacing={2} direction="column" alignItems="center">
         {boxes.map((box, index) => (
-          <DataBox key={index} data={box} />
+          <DataBox  key={index} data={box} />
         ))}
       </Stack>
       <Box textAlign="center" mt={5}>
